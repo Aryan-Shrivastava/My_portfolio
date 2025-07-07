@@ -49,3 +49,55 @@
     color: white;
 }
 
+/* Hamburger hidden by default */
+/* Ensure the navbar is the positioning context */
+.navbar {
+  position: relative;
+}
+
+/* Hamburger hidden by default */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  /* Show & absolutely position the hamburger */
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;      /* adjust vertical offset as needed */
+    right: 1rem;    /* pushes it into the right corner */
+    z-index: 1001;  /* above the menu */
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #121212;
+    position: absolute;
+    top: 4rem;      /* sits just below the navbar */
+    left: 0;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  .nav-menu.mobile-menu-open {
+    display: flex;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+}
+
+
+
